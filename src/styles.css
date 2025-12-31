@@ -5,9 +5,10 @@
 
 @layer base {
   body {
-    @apply font-sans text-gray-900;
+    @apply font-sans font-light text-gray-900;
   }
 }
+
 
 @layer components {
   .lemonade-button {
