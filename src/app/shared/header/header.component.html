@@ -4,8 +4,8 @@
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a routerLink="/" class="text-3xl font-script text-gray-900 hover:text-lemonade-pink transition-colors leading-tight">
-          <span class="block">Zachary Whittenton</span>
-          <span class="block text-base">Resume, Sandbox, Creativity</span>
+          <span class="block">Addison Whittenton</span>
+          <span class="block text-base">Architecture Portoflio</span>
         </a>
       </div>
 
@@ -13,26 +13,26 @@
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-8">
           <!-- About -->
-          <a routerLink="/projects"
+          <a routerLink="/about"
              routerLinkActive="text-lemonade-pink"
              class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Projects & Templates
+            About
           </a>
 
-          <!-- Blog (visible to everyone) -->
-          <a *ngIf="auth.isLoggedIn && auth.hasAnyRole(['Admin','Member'])"
-             routerLink="/blog"
+          <!-- porfolio (visible to everyone) -->
+          <a
+             routerLink="/portfolio"
              routerLinkActive="text-lemonade-pink"
              class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Blog
+            Portfolio
           </a>
 
-          <!-- Scheduler (only when logged in as Admin/Member) -->
-          <a *ngIf="auth.isLoggedIn && auth.hasAnyRole(['Admin','Member'])"
-             routerLink="/scheduler"
+          <!-- Resume (only when logged in as Admin/Member) -->
+          <a 
+             routerLink="/resume"
              routerLinkActive="text-lemonade-pink"
              class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Scheduler
+            Resume
           </a>
 
           <!-- Contact -->
@@ -41,47 +41,10 @@
              class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
             Contact
           </a>
-          
-          <!-- Logged-in: My Account -->
-          <a *ngIf="auth.isLoggedIn"
-             routerLink="/account"
-             routerLinkActive="text-lemonade-pink"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            My Account
-          </a>
-
-          <!-- Admin-only -->
-          <a *ngIf="auth.isAdmin()"
-             routerLink="/admin"
-             routerLinkActive="text-lemonade-pink"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Admin
-          </a>
         </div>
       </div>
 
-      <!-- Auth actions (desktop) -->
-      <div class="hidden md:block">
-        <!-- Guest -->
-        <ng-container *ngIf="!auth.isLoggedIn; else loggedInActions">
-          <a routerLink="/auth/login"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Login
-          </a>
-          <a routerLink="/auth/register"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Register
-          </a>
-        </ng-container>
-        <!-- Logged in -->
-        <ng-template #loggedInActions>
-          <button type="button"
-                  (click)="logout()"
-                  class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Logout
-          </button>
-        </ng-template>
-      </div>
+
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
@@ -124,54 +87,6 @@
            class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
           Contact
         </a>
-
-        <!-- Scheduler (only Admin/Member) -->
-        <a *ngIf="auth.isLoggedIn && auth.hasAnyRole(['Admin','Member'])"
-           routerLink="/scheduler"
-           routerLinkActive="text-lemonade-pink"
-           (click)="closeMobileMenu()"
-           class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-          Scheduler
-        </a>
-
-        <!-- My Account (logged in) -->
-        <a *ngIf="auth.isLoggedIn"
-           routerLink="/account"
-           routerLinkActive="text-lemonade-pink"
-           (click)="closeMobileMenu()"
-           class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-          My Account
-        </a>
-
-        <!-- Admin -->
-        <a *ngIf="auth.isAdmin()"
-           routerLink="/admin"
-           routerLinkActive="text-lemonade-pink"
-           (click)="closeMobileMenu()"
-           class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-          Admin
-        </a>
-
-        <!-- Auth actions -->
-        <ng-container *ngIf="!auth.isLoggedIn; else mobileLoggedIn">
-          <a routerLink="/auth/login"
-             (click)="closeMobileMenu()"
-             class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-            Login
-          </a>
-          <a routerLink="/auth/register"
-             (click)="closeMobileMenu()"
-             class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-            Register
-          </a>
-        </ng-container>
-        <ng-template #mobileLoggedIn>
-          <button type="button"
-                  (click)="logout()"
-                  class="text-left w-full text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-            Logout
-          </button>
-        </ng-template>
       </div>
     </div>
   </nav>

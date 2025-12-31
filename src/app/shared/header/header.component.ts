@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +9,6 @@ import { AuthService } from '../../core/services/auth.service';
 export class HeaderComponent {
   isMobileMenuOpen = false;
 
-  constructor(public auth: AuthService, private router: Router) {}
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -18,11 +16,5 @@ export class HeaderComponent {
 
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
-  }
-
-  logout() {
-    this.auth.logout();
-    this.closeMobileMenu();
-    this.router.navigateByUrl('/');
   }
 }

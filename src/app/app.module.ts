@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms'; // <-- added this
+import { FormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +14,7 @@ import { FeaturesSectionComponent } from './shared/features-section/features-sec
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { ServicesComponent } from './pages/services/services.component';
+import { ResumeComponent } from './pages/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { ServicesComponent } from './pages/services/services.component';
     AboutComponent,
     ContactComponent,
     PortfolioComponent,
-    ProjectsComponent,
-    ServicesComponent,
+    ResumeComponent,
     HeroSectionComponent,
     FeaturesSectionComponent
   ],
@@ -35,7 +33,7 @@ import { ServicesComponent } from './pages/services/services.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule // <-- added here
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
