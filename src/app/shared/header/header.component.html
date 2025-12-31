@@ -1,55 +1,51 @@
 <header class="bg-white shadow-sm sticky top-0 z-50">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <!-- Logo -->
+  <nav class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center h-16">
+      
+      <!-- Logo (left) -->
       <div class="flex-shrink-0">
-        <a routerLink="/" class="text-3xl font-script text-gray-900 hover:text-lemonade-pink transition-colors leading-tight">
+        <a
+          routerLink="/"
+          class="text-3xl font-script text-gray-900 hover:text-lemonade-pink transition-colors leading-tight"
+        >
           <span class="block">Addison Whittenton</span>
-          <span class="block text-base">Architecture Portoflio</span>
+          <span class="block text-base">Architecture Portfolio</span>
         </a>
       </div>
 
-      <!-- Desktop Navigation -->
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8">
-          <!-- About -->
-          <a routerLink="/about"
-             routerLinkActive="text-lemonade-pink"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            About
-          </a>
+      <!-- Desktop Navigation (CENTERED) -->
+      <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-8">
+        <a
+          routerLink="/portfolio"
+          routerLinkActive="text-lemonade-pink"
+          class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors"
+        >
+          Portfolio
+        </a>
 
-          <!-- porfolio (visible to everyone) -->
-          <a
-             routerLink="/portfolio"
-             routerLinkActive="text-lemonade-pink"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Portfolio
-          </a>
+        <a
+          routerLink="/resume"
+          routerLinkActive="text-lemonade-pink"
+          class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors"
+        >
+          Resume
+        </a>
 
-          <!-- Resume (only when logged in as Admin/Member) -->
-          <a 
-             routerLink="/resume"
-             routerLinkActive="text-lemonade-pink"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Resume
-          </a>
-
-          <!-- Contact -->
-          <a routerLink="/contact"
-             routerLinkActive="text-lemonade-pink"
-             class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors">
-            Contact
-          </a>
-        </div>
+        <a
+          routerLink="/contact"
+          routerLinkActive="text-lemonade-pink"
+          class="text-gray-700 hover:text-lemonade-pink px-3 py-2 text-sm font-medium transition-colors"
+        >
+          Contact
+        </a>
       </div>
 
-
-
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button (click)="toggleMobileMenu()"
-                class="bg-gray-50 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lemonade-pink">
+      <!-- Mobile menu button (right) -->
+      <div class="ml-auto md:hidden">
+        <button
+          (click)="toggleMobileMenu()"
+          class="bg-gray-50 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lemonade-pink"
+        >
           <svg class="h-6 w-6" [class.hidden]="isMobileMenuOpen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -60,31 +56,28 @@
       </div>
     </div>
 
-    <!-- Mobile menu (mirrors desktop order: About -> Blog -> Contact) -->
+    <!-- Mobile menu -->
     <div class="md:hidden" [class.hidden]="!isMobileMenuOpen">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-        <!-- About -->
-        <a routerLink="/about"
-           routerLinkActive="text-lemonade-pink"
-           (click)="closeMobileMenu()"
-           class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-          About
+        <a
+          routerLink="/portfolio"
+          (click)="closeMobileMenu()"
+          class="block px-3 py-2 text-base font-medium"
+        >
+          Portfolio
         </a>
-
-        <!-- Blog -->
-        <a routerLink="/blog"
-           routerLinkActive="text-lemonade-pink"
-           [routerLinkActiveOptions]="{ exact: false }"
-           (click)="closeMobileMenu()"
-           class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
-          Blog
+        <a
+          routerLink="/resume"
+          (click)="closeMobileMenu()"
+          class="block px-3 py-2 text-base font-medium"
+        >
+          Resume
         </a>
-
-        <!-- Contact -->
-        <a routerLink="/contact"
-           routerLinkActive="text-lemonade-pink"
-           (click)="closeMobileMenu()"
-           class="text-gray-700 hover:text-lemonade-pink block px-3 py-2 text-base font-medium">
+        <a
+          routerLink="/contact"
+          (click)="closeMobileMenu()"
+          class="block px-3 py-2 text-base font-medium"
+        >
           Contact
         </a>
       </div>
