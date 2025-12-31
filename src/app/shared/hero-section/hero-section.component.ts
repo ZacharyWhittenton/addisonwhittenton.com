@@ -11,6 +11,7 @@ export class HeroSectionComponent {
   @Input() description: string = '';
   @Input() ctaText: string = 'CHECK OUR PRICES';
   @Input() secondaryCtaText: string = '';
+  @Input() secondaryCtaLink: string = '/portfolio'; 
   @Input() illustration: string = `
     <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Simple house illustration -->

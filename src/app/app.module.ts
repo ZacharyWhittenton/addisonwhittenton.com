@@ -11,7 +11,6 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { HeroSectionComponent } from './shared/hero-section/hero-section.component';
 import { FeaturesSectionComponent } from './shared/features-section/features-section.component';
-import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ResumeComponent } from './pages/resume/resume.component';
@@ -22,7 +21,6 @@ import { ResumeComponent } from './pages/resume/resume.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
     ContactComponent,
     PortfolioComponent,
     ResumeComponent,

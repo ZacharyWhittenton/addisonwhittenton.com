@@ -1,85 +1,129 @@
 <!-- Hero Section -->
   <!-- ctaText="Header Card" -->
-<app-hero-section 
-  title="Zachary "
+  <app-hero-section
+  title="Addison "
   subtitle="Whittenton"
-  description="BBA IS | Web Developer | Consultant | Entrepreneur"
- 
-  secondaryCtaText="Learn More"
+  description="Master of Architecture | Bachelor of Environmental Design | Minor of Sustainable Architecture & Planning"
+  secondaryCtaText="Portfolio"
+  secondaryCtaLink="/portfolio"
   [illustration]="homeIllustration">
 </app-hero-section>
+
 
 <!-- Rotating Skills -->
 <section class="py-12 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
       <div class="flex justify-center items-center space-x-8 opacity-60">
-        <span class="text-gray-400 font-semibold">Anaplan Model Builder</span>
-        <span class="text-gray-400 font-semibold">Angular</span>
-        <span class="text-gray-400 font-semibold">Python</span>
-        <span class="text-gray-400 font-semibold">Excel</span>
-        <span class="text-gray-400 font-semibold">Access</span>
+        <span class="text-gray-400 font-semibold">Revit</span>
+        <span class="text-gray-400 font-semibold">AutoCAD</span>
+        <span class="text-gray-400 font-semibold">Rhino3D</span>
+        <span class="text-gray-400 font-semibold">Adobe InDesign</span>
+        <span class="text-gray-400 font-semibold">Adobe Illustrator</span>
+        <span class="text-gray-400 font-semibold">Adobe Photoshop</span>
+        <span class="text-gray-400 font-semibold">Enscape</span>
+        <span class="text-gray-400 font-semibold">Lumion</span>
+        <span class="text-gray-400 font-semibold">SketchUp</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
 <section class="py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
     <div class="text-center">
       <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
-        Professional Career
+        Professional & Academic Experience
       </h2>
-      <p class="mt-4 text-lg text-gray-600">
-        I began my career by starting a web development business in high school, building websites for local businesses. Afterward, I pursued higher education at the University of Texas at San Antonio, earning a BBA in Information Systems while interning as a solution analyst for Voiant Group. Following graduation, I joined DaVita IKC as a Business Analyst, where I honed my analytical and problem-solving skills. Currently, I am an Associate Consultant at Karta Consulting Group, leveraging my expertise to deliver impactful Anaplan solutions for clients.
+      <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        Architectural education and professional experience focused on design development,
+        planning, sustainability, and community-centered solutions.
       </p>
     </div>
 
+    <!-- Features Grid -->
     <div class="mt-16">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        
-        <!-- Feature 1 -->
+
+        <!-- Feature 1: Education -->
         <div class="text-center">
           <div class="flex justify-center mb-6">
-            <img src="assets/images/UTSA.webp" alt="UTSA Logo" class="w-24 h-24 object-contain rounded-full shadow-md bg-white p-2" />
+            <img
+              src="assets/images/aggie.svg.webp"
+              alt="Texas A&M University Logo"
+              class="w-32 h-32 object-contain rounded-full shadow-md bg-white p-3"
+            />
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">University of Texas at San Antonio</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Texas A&amp;M University
+          </h3>
           <p class="text-gray-600">
-            Bachelor of Business Administration in Information Systems. Database Management, Management of Technology, System Analysis & Design, Programming.
+            Master of Architecture with a Bachelor of Environmental Design.
+            Academic focus includes adaptive reuse and community-centered resilience in suburban contexts,
+            complemented by a minor in Sustainable Architecture and Planning.
           </p>
         </div>
 
-        <!-- Feature 2 -->
+        <!-- Feature 2: Study Abroad -->
         <div class="text-center">
-          <div class="flex justify-center mb-6">
-            <img src="assets/images/voiant_logo.webp" alt="Voiant Logo" class="w-24 h-24 object-contain rounded-full shadow-md bg-white p-2" />
+          <div class="flex justify-center gap-6 mb-6">
+            <img
+              src="assets/images/florence.webp"
+              alt="University of Florence"
+              class="w-32 h-32 object-contain rounded-full shadow-md bg-white p-3"
+            />
+            <img
+              src="assets/images/paris.webp"
+              alt="Paris College of Art & Design"
+              class="w-32 h-32 object-contain rounded-full shadow-md bg-white p-3"
+            />
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">Voiant Group</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Study Abroad - University of Florence &amp; Paris College of Art & Design
+          </h3>
           <p class="text-gray-600">
-            Business Solutions Analyst - Intern. Anaplan Level 1, Anaplan Level 2, and Anaplan Way Certifications.
+            Participated in a study abroad program in Florence, engaging with
+            historic and contemporary European architecture through urban analysis, precedent studies,
+            and design coursework emphasizing cultural context and spatial theory.
           </p>
         </div>
 
-        <!-- Feature 3 -->
+        <!-- Feature 3: DLR Group -->
         <div class="text-center">
           <div class="flex justify-center mb-6">
-            <img src="assets/images/DaVita.webp" alt="DaVita Logo" class="w-24 h-24 object-contain rounded-full shadow-md bg-white p-2" />
+            <img
+              src="assets/images/dlrgroup.webp"
+              alt="DLR Group Logo"
+              class="w-32 h-32 object-contain rounded-full shadow-md bg-white p-3"
+            />
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">DaVita IKC</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Architectural Intern — DLR Group
+          </h3>
           <p class="text-gray-600">
-            Business Analyst for National Operations. Automated reporting for Dialysis Assessments and Appointments for all of DaVita National utilizing Excel VBA Scripts & MS Access Databases.
+            Supported K–12 long-range planning initiatives for a $2.44B voter-approved bond program.
+            Assisted with planning data analysis, report preparation, and committee materials, and
+            conducted site visits to evaluate existing campus conditions and inform facility planning.
           </p>
         </div>
 
-        <!-- Feature 4 -->
+        <!-- Feature 4: BRW Architects -->
         <div class="text-center">
           <div class="flex justify-center mb-6">
-            <img src="assets/images/Karta.webp" alt="Karta Consulting Logo" class="w-24 h-24 object-contain rounded-full shadow-md bg-white p-2" />
+            <img
+              src="assets/images/brw.webp"
+              alt="BRW Architects Logo"
+              class="w-32 h-32 object-contain rounded-full shadow-md bg-white p-3"
+            />
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">Karta Consulting Group</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Architectural Intern — BRW Architects
+          </h3>
           <p class="text-gray-600">
-            Associate Consultant. Continuing my Anaplan experience as a Model Builder by applying my skills to Account Planning, Business Planning, Operation Workforce Planning, and Internal AI initiatives.
+            Contributing to design development and construction documentation for a new municipal fire
+            station. Produces drawings, elevations, and technical details while coordinating materials
+            and finish selections to support cohesive architectural and interior design solutions.
           </p>
         </div>
 
@@ -87,8 +131,6 @@
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -99,10 +141,10 @@
       Let's get in touch
     </h2>
     <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-      Interested in collaborating or learning more about my work? Feel free to reach out!
+      Interested in my designs? Feel free to reach out!
     </p>
     <a href="/contact" class="text-lemonade-pink hover:text-lemonade-pink-hover font-medium">
-      zacharywhittenton&#64;gmail.com →
+      addisonwhittenton28&#64;gmail.com →
     </a>
   </div>
 </section>
