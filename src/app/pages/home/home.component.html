@@ -132,6 +132,61 @@
   </div>
 </section>
 
+<section class="min-h-screen bg-gray-50">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-20 border-b border-gray-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h1 class="text-xl font-semibold tracking-tight text-gray-900">
+            Addison Whittenton — Masters Thesis
+          </h1>
+          <p class="text-sm text-gray-600">
+            Selected work (PDF)
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-gray-800 transition-colors"
+            href="assets/pdfs/Still Fairways Book Combined.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Open Full Screen
+          </a>
+
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-gray-100 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-200 transition-colors"
+            href="assets/pdfs/Still Fairways Book Combined.pdf"
+            download
+          >
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PDF Viewer -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+    <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <!-- Responsive-ish container: taller on desktop -->
+      <div class="h-[75vh] sm:h-[80vh] lg:h-[85vh]">
+        <iframe
+          title="Addison Whittenton Portfolio PDF"
+          src="assets/pdfs/Still Fairways Book Combined.pdf#view=FitH"
+          class="h-full w-full"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Fallback note (optional, but helpful) -->
+    <p class="mt-4 text-center text-sm text-gray-500">
+      If the PDF doesn’t load in your browser, use “Open Full Screen” above.
+    </p>
+  </main>
+</section>
 
 
 <!-- AI Section -->
@@ -148,3 +203,5 @@
     </a>
   </div>
 </section>
+
+
